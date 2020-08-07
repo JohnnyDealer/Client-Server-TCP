@@ -15,6 +15,9 @@ namespace Client
         private const string ServerIP = "127.0.0.1";
         private static Random random = new Random();
 
+        /// <summary>
+        /// Клиент с возможностью ограничения передачи данных
+        /// </summary>
         static void Main(string[] args)
         {
 
@@ -37,7 +40,7 @@ namespace Client
                 client.Connect(ServerIP, port);
 
                 stream = client.GetStream();                
-
+                
                 string message = "";
                 int size = 0;
                 while(true)
