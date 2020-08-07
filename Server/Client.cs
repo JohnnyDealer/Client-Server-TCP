@@ -84,7 +84,6 @@ namespace Server
                             if (limit != 0)
                                 size = SetSpeed(bytes);                            
                             seted = true;
-
                         }  
                         if (statusChanged != meChanged)
                         {
@@ -108,9 +107,7 @@ namespace Server
                     data = Encoding.UTF8.GetBytes(answer);
                     stream.Write(data, 0, data.Length);
                     data = new byte[256];
-                }
-
-                
+                }                
             }
             catch (Exception ex)
             {
